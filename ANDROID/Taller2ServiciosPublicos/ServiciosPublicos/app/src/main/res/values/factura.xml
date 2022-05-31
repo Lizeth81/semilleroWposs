@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="factura">
+        <item>Seleccionar</item>
+        <item>CENS</item>
+        <item>AGUAS KAPITAL</item>
+        <item>VEOLIA</item>
+        <item>DIRECTV</item>
+        <item>VCANAL EXITO</item>
+    </string-array>
+</resources>

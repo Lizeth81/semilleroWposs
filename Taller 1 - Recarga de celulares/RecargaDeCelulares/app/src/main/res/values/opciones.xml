@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="operador">
+        <item>Seleccionar operador</item>
+       <item>Claro</item>
+       <item>Movistar</item>
+       <item>Tigo</item>
+    </string-array>
+</resources>
