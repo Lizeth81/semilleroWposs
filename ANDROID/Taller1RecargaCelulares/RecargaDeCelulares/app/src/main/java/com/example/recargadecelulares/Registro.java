@@ -52,16 +52,23 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
     //Metodo de registrar
     public void Registrar(){
         Usuario us= new Usuario();
-        //Validar campos
-        us.setNombre(campoNombre.getText().toString());
-        us.setCorreo(campoCorreo.getText().toString());
-        us.setPassword(campoPassword.getText().toString());
+
         String nombre = campoNombre.getText().toString();
+        String correo = campoCorreo.getText().toString();
+        String pass = campoPassword.getText().toString();
+        //Validar campos
+        us.setNombre(nombre);
+        us.setCorreo(correo);
+        us.setPassword(pass);
+
 
         Pattern pattern = Pattern
                 .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
         Matcher mather = pattern.matcher(us.getCorreo());
+
+        boolean contrasena = validarContraseña(pass);
+
         //Validar valores
         if(nombre.equals("")){
             Toast.makeText(this, "Campos vacios!!!", Toast.LENGTH_LONG).show();
@@ -72,16 +79,13 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         }else if (campoPassword.length()<8) {
             Toast.makeText(this,"Por favor ingrese una contraseña mayor a 8",Toast.LENGTH_SHORT).show();
             campoPassword.requestFocus();
-        }else if(campoPassword.length()>8){
-            String pass = campoPassword.getText().toString();
-            validarPass(pass);
+        }else if(contrasena == false) {
+            Toast.makeText(this, "Para mayor seguridad la contraseña debe contener letras y numeros!!!", Toast.LENGTH_SHORT).show();
+            campoPassword.requestFocus();
         } else if(dao.RegistrarUsuario(us)) {
             Toast.makeText(this, "Registro exitoso!!!", Toast.LENGTH_SHORT).show();
             Intent myIntent = new Intent(Registro.this, MainActivity.class);
             startActivity(myIntent);
-            campoNombre.setText("");
-            campoCorreo.setText("");
-            campoPassword.setText("");
         }else{
             Toast.makeText(this, "Usuario ya registrado!!! por favor inicio sesión", Toast.LENGTH_LONG).show();
             Intent myIntent = new Intent(Registro.this, MainActivity.class);
@@ -91,40 +95,27 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
             campoPassword.setText("");
         }
     }
+    public boolean validarContraseña(String pass) {
+        boolean e = false;
+        boolean letras = false;
+        boolean numeros = false;
+        char c;
 
-    public boolean validarPass(String pass){
-        boolean rtn = true;
-        int seguidos = 0;
-        char ultimo = 0xFF;
-
-        int minuscula = 0;
-        int mayuscula = 0;
-        int numero = 0;
-        int especial = 0;
-        boolean espacio = false;
-//        if(pass.length() < 8) return false; // tamaño
-        for(int i=0;i<pass.length(); i++){
-            char c = pass.charAt(i);
-            if(c <= ' ' || c > '~' ){
-                rtn = false; //Espacio o fuera de rango
-                break;
-            }
-            if( (c > ' ' && c < '0') || (c >= ':' && c < 'A') || (c >= '[' && c < 'a') || (c >= '{' && c < 127) ){
-                especial++;
-            }
-            if(c >= '0' && c < ':') numero++;
-            if(c >= 'A' && c < '[') mayuscula++;
-            if(c >= 'a' && c < '{') minuscula++;
-
-            seguidos = (c==ultimo) ? seguidos + 1 : 0;
-            if(seguidos >= 2){
-                rtn = false; // 3 seguidos
-                break;
-            }
-            ultimo = c;
+        for (int i = 0; i < pass.length(); i++) {
+            c = pass.charAt(i);
+            if (Character.isDigit(c))
+                numeros = true;
+            if (Character.isLetter(c))
+                letras = true;
         }
-        rtn = rtn && especial > 0 && numero > 0 && minuscula > 0 && mayuscula > 0;
-        return rtn;
+        if (numeros && letras) {
+            e = true;
+        } else {
+            e = false;
+        }
+        return e;
     }
+
+
 
 }

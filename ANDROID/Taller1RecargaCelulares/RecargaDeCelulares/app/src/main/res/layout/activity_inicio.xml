@@ -25,10 +25,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="85dp"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
-                android:text="¡RECARGA DE CELULARES!"
+                android:text="RECARGA DE CELULARES"
                 android:textSize="20dp"
+                android:layout_gravity="center"
                 android:textStyle="bold" />
 
             <TextView
@@ -133,7 +134,7 @@
                 android:id="@+id/aceptar"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@color/teal_200"
                 android:onClick="onClick"

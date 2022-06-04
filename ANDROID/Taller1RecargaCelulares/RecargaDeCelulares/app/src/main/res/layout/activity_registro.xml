@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/flechaIzquierda"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         app:srcCompat="@drawable/flecha"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:onClick="onClick"/>
 
     <ScrollView
@@ -26,17 +26,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¡RECARGA DE CELULARES!"
+                android:text="RECARGA DE CELULARES"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="85dp"/>
+                android:layout_gravity="center"
+                android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REGISTRO DE USUARIO"
                 android:textSize="18dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginTop="50dp"
                 android:layout_marginLeft="35dp"/>
 
@@ -93,7 +95,7 @@
                 android:id="@+id/Aceptar"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@color/teal_200"
                 android:text="ACEPTAR"
