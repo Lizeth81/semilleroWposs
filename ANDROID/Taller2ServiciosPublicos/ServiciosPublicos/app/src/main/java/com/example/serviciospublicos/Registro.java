@@ -36,7 +36,9 @@ public class Registro extends AppCompatActivity {
             us.setNombre(nombre);
             us.setCedula(cedula);
             us.setPass(pass);
-            us.setMonto(monto);
+
+            boolean contrasena = validarContraseña(pass);
+            Log.e("TAG", "contraseña"+contrasena);
 
             //Validar valores
             if(nombre.equals("") || cedula.equals("") || pass.equals("")){
@@ -45,6 +47,9 @@ public class Registro extends AppCompatActivity {
             }else if (binding.editCedula.length() != 10){
                 Toast.makeText(this,"Cedula incorrecta!!!",Toast.LENGTH_SHORT).show();
                 binding.editCedula.requestFocus();
+            }else if(contrasena == false) {
+                Toast.makeText(this, "Para mayor seguridad la contraseña debe contener letras y numeros!!!", Toast.LENGTH_SHORT).show();
+                binding.editContrasena.requestFocus();
             }else if(dao.RegistrarUsuario(us)) {
                 Toast.makeText(getApplicationContext(), "Registro exitoso!!!", Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(Registro.this, InicioSesion.class);
@@ -55,5 +60,25 @@ public class Registro extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+    }
+    public boolean validarContraseña(String pass) {
+        boolean e = false;
+        boolean letras = false;
+        boolean numeros = false;
+        char c;
+
+        for (int i = 0; i < pass.length(); i++) {
+            c = pass.charAt(i);
+            if (Character.isDigit(c))
+                numeros = true;
+            if (Character.isLetter(c))
+                letras = true;
+        }
+        if (numeros && letras) {
+            e = true;
+        } else {
+            e = false;
+        }
+        return e;
     }
 }
