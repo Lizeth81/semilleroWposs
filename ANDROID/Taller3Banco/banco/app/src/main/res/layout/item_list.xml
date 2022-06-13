@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E0DADA">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:orientation="vertical"
+            android:elevation="10dp">
+
+            <TextView
+                android:id="@+id/idDato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="id" />
+
+            <TextView
+                android:id="@+id/tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tipo" />
+
+            <TextView
+                android:id="@+id/monto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="monto" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="descripcion" />
+
+            <TextView
+                android:id="@+id/fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="fecha" />
+
+            <TextView
+                android:id="@+id/estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="estado" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

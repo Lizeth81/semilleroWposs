@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.banco">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/credit"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/credit"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Banco"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".codigoRetiro.view.CodigoRetiro"
+            android:exported="true"/>
+
+
+        <activity
+            android:name=".transaccion.view.Transacciones"
+            android:exported="true" />
+        <activity
+            android:name=".codigoQR.view.CodigoQr"
+            android:exported="true" />
+        <activity
+            android:name=".transferencia.view.Transferencia"
+            android:exported="true" />
+        <activity
+            android:name=".retiro.view.Retiro"
+            android:exported="true" />
+        <activity
+            android:name=".Inicio"
+            android:exported="true" />
+        <activity
+            android:name=".registro.view.Registro"
+            android:exported="true" />
+        <activity
+            android:name=".login.view.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
