@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220614T150000Z
+DTEND:20220614T153000Z
+DTSTAMP:20220613T202706Z
+ORGANIZER;CN=weppydigital@gmail.com:mailto:weppydigital@gmail.com
+UID:c53sdp5u7kg6da5vn1rlh0kk10@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=weppydigital@gmail.com;X-NUM-GUESTS=0:mailto:weppydigital@gmail.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=lizethprado81@gmail.com;X-NUM-GUESTS=0:mailto:lizethprado81@gmail.com
+X-MICROSOFT-CDO-OWNERAPPTID:-860894890
+CREATED:20220613T202704Z
+DESCRIPTION:Nombre del evento: Reunión de 30 Min\n\nHola! por favor selecci
+ ona el día y la hora que mejor se ajuste a tu disponibilidad para reunirnos
+ \, selecciona si deseas que sea presencial o virtual.\n\nUbicación: AV 4E #
+  2-37 B. LA CEIBA\n\n¿Como quieres que nos reunamos?: Virtual\n\n¿Necesitas
+  realizar algún cambio a este evento?\nCancelar: https://calendly.com/cance
+ llations/63fa7997-2752-4d94-9988-824003ba77d1\nReprogramar: https://calendl
+ y.com/reschedulings/63fa7997-2752-4d94-9988-824003ba77d1\n\nDesarrollado po
+ r Calendly.com\n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nNo edites esta sección de la descripción.
+ \n\nVisualice el evento en la URL https://calendar.google.com/calendar/even
+ t?action=VIEW&eid=YzUzc2RwNXU3a2c2ZGE1dm4xcmxoMGtrMTAgbGl6ZXRocHJhZG84MUBt&
+ tok=MjIjd2VwcHlkaWdpdGFsQGdtYWlsLmNvbTYyZDcxNmMwNzdlOGU4MzMxMDE1ODk5N2E2ZjY
+ xMmZkNmRhYmU0MWQ&ctz=America%2FBogota&hl=es&es=1.\n-::~:~::~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220613T202704Z
+LOCATION:AV 4E # 2-37 B. LA CEIBA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lizeth Paola Prado Pabón y Weppy Digital
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
